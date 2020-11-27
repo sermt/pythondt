@@ -1,0 +1,47 @@
+{% extends 'header.html' %} 
+
+{% block content %}
+<script type="text/javascript" src="{{url_for('static',filename='js/ajx.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+"
+<div class="" style="background-color: #ffdf00;  margin: auto;">
+  <h1 style="text-align: center;">Bananos en proceso de maduración</h1>
+</div>
+<div class="row">
+{%for x in range(cuenta)%}
+
+	<div class="col-sm-4">
+		<div class="card">
+  			<img class="card-img-top" src="{{url_for('static',filename='img/'+asd[x]+'img.jpg')}}" alt="Card image cap">
+  
+  	<div class="card-body">
+    	<p class="card-text">
+    	
+			{%for t,v in t1[x]%}
+			{% if (t=='_id'): %}
+ <center><p class="p p-1" id="{{t}}">{{t}} : {{v}} </p></center>
+ 	{%elif(t=='Estado'):%}
+ <center>		<button  id="{{v}},{{vals[x]}}" class="pop btn btn-outline-warning text-white ">{{t}} : {{v}} </button></center>
+ 	{%else:%}
+ 		<center><p class="p" id="paragraph">{{t}} : {{v}} </p></center>
+ 							{%endif%}
+
+							{%endfor%}
+</p>
+			</p>
+			</div>
+  		</div>
+	</div>
+
+{% endfor %}
+
+</div>
+
+
+
+
+
+{% endblock %}
+
+
