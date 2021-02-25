@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<h1 id="h1">Documento de pruebas</h1>
+	<h1 class="color">Documento de pruebas2</h1>
+	<h2 id="h2" class="color">Javascript</h2>
+	<h3 id="h3">Parrafo modificable</h3>
+<script type="text/javascript">
+	let cabecero = document.getElementById('h1').innerHTML;
+	console.log(cabecero);
+	let cabecero2 = document.getElementById('h2');
+	console.log(cabecero2.innerHTML);
+	let modi= document.getElementById('h3');
+	modi.innerHTML="hola";
+
+
+	////////////////////////////////////////////////////
+	let tag= document.getElementsByTagName('h1');
+	for (var i = 0; i < tag.length; i++) {
+		console.log(tag[i]);
+	}
+	console.log(tag);
+///////////////////////////////////////////////////////
+	let clase= document.getElementsByClassName('color');
+	for(let elementos of clase){
+		elementos.innerHTML= "holis";
+	}
+	
+	console.log(clase);
+
+</script>
+</body>
+</html>
